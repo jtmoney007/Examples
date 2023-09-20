@@ -63,6 +63,6 @@ To start exploring these Kubernetes examples, follow these steps:
 	```
 	
 2. Run docker compose 
-```
+	```bash
 	docker compose up --build
-```
+	```
