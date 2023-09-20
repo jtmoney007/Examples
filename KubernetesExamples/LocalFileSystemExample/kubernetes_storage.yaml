@@ -29,7 +29,7 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: /Users/jt/k8s/
+    path: /run/desktop/mnt/host/c/k8-data/ #/Users/jt/k8-data/
   persistentVolumeReclaimPolicy: Retain
 ---
 #

@@ -12,14 +12,19 @@ spec:
           restartPolicy: Never
           containers:
           - name: simpleconsoleapp
-            image: ${DOCKER_REGISTRY-}simpleconsoleapp
-            imagePullPolicy: Always
+            image: simpleconsoleapp:latest
+            imagePullPolicy: Never
             ports:
               # Add your container ports if needed
             volumeMounts:
             - name: my-volume
               mountPath: /app/data/
+            env:
+            - name: POD_NAME  
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name  
           volumes:
           - name: my-volume
             persistentVolumeClaim:
-              claimName: my-persistent-volume-claim # Use the PVC you created
+              claimName: my-persistent-volume-claim 

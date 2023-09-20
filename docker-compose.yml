@@ -2,7 +2,9 @@ version: '3.4'
 
 services:
   simpleconsoleapp:
-    image: ${DOCKER_REGISTRY-}simpleconsoleapp
+    image: simpleconsoleapp
     build:
       context: .
       dockerfile: KubernetesExamples/SimpleConsoleApp/Dockerfile
+    volumes:
+      - C:\k8-data\:/app/data  #/Users/jt/k8-data/
