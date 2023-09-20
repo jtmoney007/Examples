@@ -1,4 +1,4 @@
-# Project Name
+# Examples Project
 
 ## Project Overview
 
