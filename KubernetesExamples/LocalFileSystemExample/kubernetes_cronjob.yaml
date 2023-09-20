@@ -5,8 +5,7 @@ metadata:
   namespace: my-local-namespace-localfs
 spec:
   schedule: "*/1 * * * *"
-  concurrencyPolicy: Allow  # Allow concurrent executions
-  successfulJobsHistoryLimit: 3  # Adjust the number of successful job history to keep
+  concurrencyPolicy: Allow  
   jobTemplate:
     spec:
       template:
