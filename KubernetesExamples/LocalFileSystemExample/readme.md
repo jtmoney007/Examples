@@ -20,6 +20,7 @@ The first step is to create a `Namespace` that defines namespace for the project
 
 ```bash
 kubectl apply -f kubernetes_setup.yaml
+```
 
 ### Step 2: Create the Storage
 
@@ -29,12 +30,14 @@ Next, we are going to create a StorageClass, Persistent Volume and a Persisten V
 
 ```bash
 kubectl apply -f kubernetes_storage.yaml
+```
 
 ### Step 3: Deploy the CronJob
 Finally, deploy the CronJob that runs the console application. This application reads and writes data to the shared volume. The POD_NAME environment variable is set based on the pod's name.
 
 ```bash
 kubectl apply -f kubernetes_cronjob.yaml
+```
 
 ### Cleanup
 
@@ -44,3 +47,4 @@ kubectl delete cronjob consoleapp1-cronjob -n my-local-namespace
 kubectl delete pvc my-persistent-volume-claim -n my-local-namespace
 kubectl delete pv my-persistent-volume -n my-local-namespace
 kubectl delete storageclass my-local-hostpath -n my-local-namespace
+```
