@@ -5,6 +5,8 @@ metadata:
   namespace: my-local-namespace-localfs
 spec:
   schedule: "*/1 * * * *"
+  concurrencyPolicy: Allow  # Allow concurrent executions
+  successfulJobsHistoryLimit: 3  # Adjust the number of successful job history to keep
   jobTemplate:
     spec:
       template:
@@ -27,4 +29,5 @@ spec:
           volumes:
           - name: my-volume
             persistentVolumeClaim:
-              claimName: my-persistent-volume-claim 
+              claimName: my-persistent-volume-claim
+      parallelism: 3  # Set the number of concurrent executions

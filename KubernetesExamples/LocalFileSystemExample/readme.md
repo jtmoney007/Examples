@@ -47,6 +47,6 @@ kubectl delete cronjob consoleapp1-cronjob -n my-local-namespace-localfs
 kubectl delete pvc my-persistent-volume-claim -n my-local-namespace-localfs
 kubectl delete pv my-persistent-volume -n my-local-namespace-localfs
 kubectl delete storageclass my-local-hostpath -n my-local-namespace-localfs
-kubectl delete namespace mymy-local-namespace-localfs
+kubectl delete namespace my-local-namespace-localfs
 
 ```
