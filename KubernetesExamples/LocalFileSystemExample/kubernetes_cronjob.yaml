@@ -1,0 +1,25 @@
+﻿apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: consoleapp1-cronjob
+  namespace: my-local-namespace
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+          - name: simpleconsoleapp
+            image: ${DOCKER_REGISTRY-}simpleconsoleapp
+            imagePullPolicy: Always
+            ports:
+              # Add your container ports if needed
+            volumeMounts:
+            - name: my-volume
+              mountPath: /app/data/
+          volumes:
+          - name: my-volume
+            persistentVolumeClaim:
+              claimName: my-persistent-volume-claim # Use the PVC you created

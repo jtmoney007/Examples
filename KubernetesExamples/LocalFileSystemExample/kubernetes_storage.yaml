@@ -1,0 +1,49 @@
+﻿
+#
+# StorageClass
+#
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass 
+metadata:   
+  name: my-local-hostpath
+  namespace: my-local-namespace
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+
+---
+#
+# PersistentVolume
+#
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-persistent-volume
+  namespace: my-local-namespace
+  labels:
+    type: local
+spec:
+  storageClassName: my-local-hostpath
+  capacity:
+    storage: 256Mi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: /Users/jt/k8s/
+  persistentVolumeReclaimPolicy: Retain
+---
+#
+# PersistentVolumeClaim
+#
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-persistent-volume-claim
+  namespace: my-local-namespace
+spec:
+  storageClassName: my-local-hostpath
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 256Mi
