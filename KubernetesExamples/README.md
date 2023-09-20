@@ -60,3 +60,9 @@ To start exploring these Kubernetes examples, follow these steps:
 
    ```bash
    git clone https://github.com/jtmoney007/Examples.git
+	```
+	
+2. Run docker compose 
+```
+docker compose up --build
+```
