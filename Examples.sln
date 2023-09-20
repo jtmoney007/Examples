@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KubernetesExamples", "KubernetesExamples", "{292D0243-D469-4AD0-83A8-C333E33A57E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsoleApp", "KubernetesExamples\SimpleConsoleApp\SimpleConsoleApp.csproj", "{27E23C12-BEE1-4067-91D8-0F56877D9C02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleConsoleApp", "KubernetesExamples\SimpleConsoleApp\SimpleConsoleApp.csproj", "{27E23C12-BEE1-4067-91D8-0F56877D9C02}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BF51B409-E329-426D-8BF3-D15FA281FE54}"
 EndProject
@@ -15,6 +15,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LocalFileSystemExample", "L
 		KubernetesExamples\LocalFileSystemExample\kubernetes_setup.yaml = KubernetesExamples\LocalFileSystemExample\kubernetes_setup.yaml
 		KubernetesExamples\LocalFileSystemExample\kubernetes_storage.yaml = KubernetesExamples\LocalFileSystemExample\kubernetes_storage.yaml
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigMapExample", "ConfigMapExample", "{B2505E99-D092-48D2-AA3B-07AC3651D6A6}"
+	ProjectSection(SolutionItems) = preProject
+		KubernetesExamples\ConfigMapExample\kubernetes_configmap.yaml = KubernetesExamples\ConfigMapExample\kubernetes_configmap.yaml
+		KubernetesExamples\ConfigMapExample\kubernetes_setup.yaml = KubernetesExamples\ConfigMapExample\kubernetes_setup.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigMapConsoleApp", "KubernetesExamples\ConfigMapConsoleApp\ConfigMapConsoleApp.csproj", "{D91C237B-1B86-41D2-86B6-02F8205094AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,15 +38,21 @@ Global
 		{BF51B409-E329-426D-8BF3-D15FA281FE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF51B409-E329-426D-8BF3-D15FA281FE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF51B409-E329-426D-8BF3-D15FA281FE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91C237B-1B86-41D2-86B6-02F8205094AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91C237B-1B86-41D2-86B6-02F8205094AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91C237B-1B86-41D2-86B6-02F8205094AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91C237B-1B86-41D2-86B6-02F8205094AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4296452C-447A-4A83-8B17-BDA521E7527F}
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{27E23C12-BEE1-4067-91D8-0F56877D9C02} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
 		{9A6F05E5-CF3A-4C79-B734-6931CCD6015E} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+		{B2505E99-D092-48D2-AA3B-07AC3651D6A6} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+		{D91C237B-1B86-41D2-86B6-02F8205094AD} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4296452C-447A-4A83-8B17-BDA521E7527F}
 	EndGlobalSection
 EndGlobal

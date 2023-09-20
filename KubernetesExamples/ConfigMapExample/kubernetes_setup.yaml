@@ -1,5 +1,5 @@
 ﻿apiVersion: v1
 kind: Namespace
 metadata:
-  name: my-local-namespace-localfs
+  name: my-local-namespace-configmap
 

@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: configmapconsoleapp-job  # Unique name for your Job
+  namespace: my-local-namespace-configmap
+spec:
+  completions: 1  
+  parallelism: 1
+  template:
+    metadata:
+      labels:
+        app: configmapconsoleapp
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: configmapconsoleapp
+        image: configmapconsoleapp:latest
+        imagePullPolicy: Never
+        ports:
+          # Add your container ports if needed
+        env:
+        - name: JOB_NAME  
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name  
+        - name: JOB_NAMESPACE  
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: JOB_CONFIGMAP 
+          value: my-config-map  

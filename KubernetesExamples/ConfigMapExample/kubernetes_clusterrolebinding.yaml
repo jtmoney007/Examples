@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: configmap-reader-binding
+subjects:
+- kind: ServiceAccount
+  name: default  # The name of your service account
+  namespace: my-local-namespace-configmap
+roleRef:
+  kind: ClusterRole
+  name: configmap-reader-role  # Reference the ClusterRole you created
+  apiGroup: rbac.authorization.k8s.io

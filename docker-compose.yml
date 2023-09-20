@@ -8,3 +8,10 @@ services:
       dockerfile: KubernetesExamples/SimpleConsoleApp/Dockerfile
     volumes:
       - C:\k8-data\:/app/data  #/Users/jt/k8-data/
+
+  configmapconsoleapp:
+    image: configmapconsoleapp
+    build:
+      context: .
+      dockerfile: KubernetesExamples/ConfigMapConsoleApp/Dockerfile
+

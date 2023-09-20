@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config-map
+  namespace: my-local-namespace-configmap  
+data:
+  database_url: "jdbc:mysql://mydbserver:3306/mydatabase"
+  api_key: "my-secret-api-key"
+  app_config: |
+    {
+      "setting1": "value1",
+      "setting2": "value2",
+      "setting3": "value3"
+    }
