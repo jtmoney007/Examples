@@ -14,7 +14,7 @@ Before you begin, ensure you have the following prerequisites:
 
 Follow these steps to set up and run the example:
 
-### Step 1: Deploy the StorageClass
+### Step 1: Create the Namespace
 
 The first step is to create a `Namespace` that defines namespace for the project.
 
