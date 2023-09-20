@@ -43,8 +43,10 @@ kubectl apply -f kubernetes_cronjob.yaml
 
 To remove the deployed resources, you can delete the Kubernetes objects:
 ```bash
-kubectl delete cronjob consoleapp1-cronjob -n my-local-namespace
-kubectl delete pvc my-persistent-volume-claim -n my-local-namespace
-kubectl delete pv my-persistent-volume -n my-local-namespace
-kubectl delete storageclass my-local-hostpath -n my-local-namespace
+kubectl delete cronjob consoleapp1-cronjob -n my-local-namespace-localfs
+kubectl delete pvc my-persistent-volume-claim -n my-local-namespace-localfs
+kubectl delete pv my-persistent-volume -n my-local-namespace-localfs
+kubectl delete storageclass my-local-hostpath -n my-local-namespace-localfs
+kubectl delete namespace mymy-local-namespace-localfs
+
 ```

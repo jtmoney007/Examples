@@ -1,29 +1,60 @@
-# Kubernetes ClusterRole: configmap-reader-role
+# Kubernetes Configuration Example
 
-This Kubernetes ClusterRole, named `configmap-reader-role`, is designed to provide read-only access to ConfigMaps within a Kubernetes cluster. It grants permissions to list and retrieve (get) ConfigMaps in any namespace.
+This repository contains Kubernetes YAML files that demonstrate how to set up various resources within a Kubernetes cluster, including a Namespace, ConfigMap, ClusterRoles, and a Job. These resources are used together to illustrate a configuration scenario.
+
+## Setup Namespace
+
+The Namespace my-local-namespace-configmap is created to isolate resources for this configuration example.
+
+```bash
+kubectl apply -f kubernetes_setup.yaml
+```
+
+## Setup ConfigMap
+
+The ConfigMap my-config-map is defined with sample configuration data used by applications within the namespace.
+
+```bash
+kubectl apply -f kubernetes_configmap.yaml
+```
+
+## Setup Cluster Roles
+
+A ClusterRole named configmap-reader-role is created, allowing get and list operations on ConfigMaps within the namespace.
+
+```bash
+kubectl apply -f kubernetes_clusterrole.yaml
+```
+
+## Setup Cluster Role Binding
+
+A ClusterRoleBinding named configmap-reader-binding is created as a service account, allowing get and list operations on ConfigMaps within the config map reader role.
+
+```bash
+kubectl apply -f kubernetes_clusterrolebinding.yaml
+```
+
+## Create Job
+
+A Job named configmapconsoleapp-job is defined to run a container, illustrating how to access ConfigMap values using environment variables.
+
+```bash
+kubectl apply -f kubernetes_job.yaml
+```
 
 ## Usage
 
-This ClusterRole can be used in conjunction with RoleBindings to grant specific users or service accounts the ability to read ConfigMaps. Here's an example of how to create a RoleBinding using this ClusterRole:
+After the job has executed, a POD will show the configuration map values in the log terminal.
 
-In this example, replace your-username, your-namespace, and any other values with your specific configuration.
+To access a pod's logs in Kubernetes, you can utilize the kubectl logs command.
 
-## ClusterRole Details
+### Cleanup
 
-##Permissions Granted
-This ClusterRole grants the following permissions:
-
-API Groups: [""] (empty string represents the core API group)
-Resources: ["configmaps"]
-Verbs: ["get", "list"]
-
-#### Resources Accessible
-ConfigMaps in any namespace
-
-### Applying the ClusterRole
-You can apply this ClusterRole to your Kubernetes cluster using the kubectl command-line tool. For example:
-
-   ```bash
-kubectl apply -f kubernetes_clusterrole.yaml
-   ```
-  
+To remove the deployed resources, you can delete the Kubernetes objects:
+```bash
+kubectl delete job configmapconsoleapp-job -n my-local-namespace-configmap
+kubectl delete clusterrolebinding configmap-reader-binding -n my-local-namespace-configmap
+kubectl delete clusterrole configmap-reader-role -n my-local-namespace-configmap
+kubectl delete configmap my-config-map -n my-local-namespace-configmap
+kubectl delete namespace my-local-namespace-configmap
+```
