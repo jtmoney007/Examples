@@ -33,6 +33,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecretExample", "SecretExam
 	ProjectSection(SolutionItems) = preProject
 		KubernetesExamples\SecretExample\kubernetes_secrets.yaml = KubernetesExamples\SecretExample\kubernetes_secrets.yaml
 		KubernetesExamples\SecretExample\kubernetes_setup.yaml = KubernetesExamples\SecretExample\kubernetes_setup.yaml
+		KubernetesExamples\SecretExample\kubernetes_job.yaml = KubernetesExamples\SecretExample\kubernetes_job.yaml
+		KubernetesExamples\SecretExample\kubernetes_role.yaml = KubernetesExamples\SecretExample\kubernetes_role.yaml
+		KubernetesExamples\SecretExample\kubernetes_rolebinding.yaml = KubernetesExamples\SecretExample\kubernetes_rolebinding.yaml
 	EndProjectSection
 EndProject
 Global
