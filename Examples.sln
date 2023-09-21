@@ -18,11 +18,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LocalFileSystemExample", "L
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigMapExample", "ConfigMapExample", "{B2505E99-D092-48D2-AA3B-07AC3651D6A6}"
 	ProjectSection(SolutionItems) = preProject
+		KubernetesExamples\ConfigMapExample\kubernetes_clusterrole.yaml = KubernetesExamples\ConfigMapExample\kubernetes_clusterrole.yaml
+		KubernetesExamples\ConfigMapExample\kubernetes_clusterrolebinding.yaml = KubernetesExamples\ConfigMapExample\kubernetes_clusterrolebinding.yaml
 		KubernetesExamples\ConfigMapExample\kubernetes_configmap.yaml = KubernetesExamples\ConfigMapExample\kubernetes_configmap.yaml
 		KubernetesExamples\ConfigMapExample\kubernetes_setup.yaml = KubernetesExamples\ConfigMapExample\kubernetes_setup.yaml
+		KubernetesExamples\ConfigMapExample\kubernetes_job.yaml = KubernetesExamples\ConfigMapExample\kubernetes_job.yaml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigMapConsoleApp", "KubernetesExamples\ConfigMapConsoleApp\ConfigMapConsoleApp.csproj", "{D91C237B-1B86-41D2-86B6-02F8205094AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretsConsoleApp", "KubernetesExamples\SecretsConsoleApp\SecretsConsoleApp.csproj", "{DAF26B32-E33F-44B8-884B-66148569ED58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecretExample", "SecretExample", "{1FA6908C-AB5C-4417-BD86-7417B8CD793C}"
+	ProjectSection(SolutionItems) = preProject
+		KubernetesExamples\SecretExample\kubernetes_secrets.yaml = KubernetesExamples\SecretExample\kubernetes_secrets.yaml
+		KubernetesExamples\SecretExample\kubernetes_setup.yaml = KubernetesExamples\SecretExample\kubernetes_setup.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +53,10 @@ Global
 		{D91C237B-1B86-41D2-86B6-02F8205094AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D91C237B-1B86-41D2-86B6-02F8205094AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D91C237B-1B86-41D2-86B6-02F8205094AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF26B32-E33F-44B8-884B-66148569ED58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF26B32-E33F-44B8-884B-66148569ED58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF26B32-E33F-44B8-884B-66148569ED58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF26B32-E33F-44B8-884B-66148569ED58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +66,8 @@ Global
 		{9A6F05E5-CF3A-4C79-B734-6931CCD6015E} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
 		{B2505E99-D092-48D2-AA3B-07AC3651D6A6} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
 		{D91C237B-1B86-41D2-86B6-02F8205094AD} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+		{DAF26B32-E33F-44B8-884B-66148569ED58} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+		{1FA6908C-AB5C-4417-BD86-7417B8CD793C} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4296452C-447A-4A83-8B17-BDA521E7527F}

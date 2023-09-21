@@ -15,3 +15,10 @@ services:
       context: .
       dockerfile: KubernetesExamples/ConfigMapConsoleApp/Dockerfile
 
+
+  secretsconsoleapp:
+    image: secretsconsoleapp
+    build:
+      context: .
+      dockerfile: KubernetesExamples/SecretsConsoleApp/Dockerfile
+

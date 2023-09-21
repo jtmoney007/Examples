@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SecretsConsoleApp": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
