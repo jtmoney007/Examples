@@ -11,31 +11,31 @@ This repository contains Kubernetes YAML files that demonstrate how to set up a 
 By integrating PVs, PVCs, and Storage Classes into this example, you can better manage your Kubernetes storage resources and ensure data persistence for your applications.
 
 
-# Kubernetes Persistent Volumes (PV), Persistent Volume Claims (PVC), and Storage Classes
+## Kubernetes Persistent Volumes (PV), Persistent Volume Claims (PVC), and Storage Classes
 
-## Introduction
+### Introduction
 
 In Kubernetes, managing and persisting data is crucial for stateful applications. **Persistent Volumes (PVs)**, **Persistent Volume Claims (PVCs)**, and **Storage Classes** are Kubernetes resources used to manage and provision storage in a Kubernetes cluster.
 
-### Persistent Volumes (PV)
+#### Persistent Volumes (PV)
 
 - **What are PVs?**: PVs are cluster-level resources that represent physical storage volumes, such as local storage, network-attached storage (NAS), or cloud storage, in a Kubernetes cluster.
 
 - **Why Use PVs?**: PVs abstract the underlying storage infrastructure, providing a standardized interface for developers to request storage without needing to know its specifics.
 
-### Persistent Volume Claims (PVC)
+#### Persistent Volume Claims (PVC)
 
 - **What are PVCs?**: PVCs are requests for storage made by pods. They define the required storage capacity, access mode, and optional storage class.
 
 - **Why Use PVCs?**: PVCs allow developers to claim and use PVs without worrying about the specifics of the underlying storage, making applications more portable across different environments.
 
-### Storage Classes
+#### Storage Classes
 
 - **What are Storage Classes?**: Storage Classes are used to define different storage tiers and policies within a cluster. They provide a way to dynamically provision PVs based on predefined templates.
 
 - **Why Use Storage Classes?**: Storage Classes enable dynamic provisioning, allowing Kubernetes to automatically create PVs that match the requested storage class, reducing administrative overhead.
 
-## How PV, PVC, and Storage Classes Work Together
+### How PV, PVC, and Storage Classes Work Together
 
 1. A PV represents a physical storage volume in the cluster.
 2. A Storage Class defines storage properties, such as performance and redundancy, and references a specific provisioner (e.g., NFS, AWS EBS).
