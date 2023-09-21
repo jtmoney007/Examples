@@ -1,4 +1,4 @@
-# ConfigMap Reader for Kubernetes
+# Kubernetes ConfigMap
 
 This C# console application demonstrates how to read data from a Kubernetes ConfigMap in a specified namespace. It uses the official Kubernetes C# client library to interact with the Kubernetes API.
 
