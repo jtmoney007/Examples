@@ -10,7 +10,7 @@ The Namespace my-local-namespace-secrets is created to isolate resources for thi
 kubectl apply -f kubernetes_setup.yaml
 ```
 
-## Setup ConfigMap
+## Setup Secret
 
 The Secrets my-secret is defined with sample configuration data used by applications within the namespace.
 
@@ -18,7 +18,7 @@ The Secrets my-secret is defined with sample configuration data used by applicat
 kubectl apply -f kubernetes_secrets.yaml
 ```
 
-## Setup Roles
+## Setup Role
 
 A Role named secrets-reader-role is created, allowing get and list operations on ConfigMaps within the namespace.
 
