@@ -9,7 +9,7 @@ Before you begin, ensure you have the following prerequisites:
 - .NET SDK installed on your local machine.
 - A running Kubernetes cluster.
 - `kubectl` configured to communicate with your cluster.
-- Basic knowledge of Kubernetes concepts, including ConfigMaps.
+- Basic knowledge of Kubernetes concepts, including Secrets.
 
 ## Usage
 
