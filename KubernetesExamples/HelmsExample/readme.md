@@ -50,6 +50,10 @@ helm install my-release ./my-helm-chart
 
 The above will create a ConfigMap resource named my-application-config with a key DATABASE_URL that has the value http://default-database-url.com.
 
+After the job has executed, a POD will show the configuration map values in the log terminal.
+
+To access a pod's logs in Kubernetes, you can utilize the kubectl logs command.
+
 ## Overriding Values:
 
 You can also override the values when installing or upgrading the chart:
@@ -61,12 +65,6 @@ helm install my-release ./my-helm-chart --set config.database_url=http://new-dat
 With this command, the created ConfigMap will have a DATABASE_URL of http://new-database-url.com.
 
 The power of Helm templates and values is in their flexibility and ability to parameterize almost any part of the Kubernetes manifests, allowing for reusable and easily configurable charts.
-
-## Usage
-
-After the job has executed, a POD will show the configuration map values in the log terminal.
-
-To access a pod's logs in Kubernetes, you can utilize the kubectl logs command.
 
 ### Cleanup
 
