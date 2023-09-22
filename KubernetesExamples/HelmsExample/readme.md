@@ -13,6 +13,14 @@ my-helm-chart/
 └── values.yaml
 ```
 
+## Chart.yaml
+
+```bash
+apiVersion: v2
+name: my-chart
+version: 1.0.0
+description: My Helm Chart
+```
 
 ## values.yaml
 
