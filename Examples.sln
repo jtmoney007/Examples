@@ -31,11 +31,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretsConsoleApp", "Kubern
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecretExample", "SecretExample", "{1FA6908C-AB5C-4417-BD86-7417B8CD793C}"
 	ProjectSection(SolutionItems) = preProject
-		KubernetesExamples\SecretExample\kubernetes_secrets.yaml = KubernetesExamples\SecretExample\kubernetes_secrets.yaml
-		KubernetesExamples\SecretExample\kubernetes_setup.yaml = KubernetesExamples\SecretExample\kubernetes_setup.yaml
 		KubernetesExamples\SecretExample\kubernetes_job.yaml = KubernetesExamples\SecretExample\kubernetes_job.yaml
 		KubernetesExamples\SecretExample\kubernetes_role.yaml = KubernetesExamples\SecretExample\kubernetes_role.yaml
 		KubernetesExamples\SecretExample\kubernetes_rolebinding.yaml = KubernetesExamples\SecretExample\kubernetes_rolebinding.yaml
+		KubernetesExamples\SecretExample\kubernetes_secrets.yaml = KubernetesExamples\SecretExample\kubernetes_secrets.yaml
+		KubernetesExamples\SecretExample\kubernetes_setup.yaml = KubernetesExamples\SecretExample\kubernetes_setup.yaml
 	EndProjectSection
 EndProject
 Global

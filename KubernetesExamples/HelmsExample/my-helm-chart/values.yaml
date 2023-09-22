@@ -1,0 +1,3 @@
+appName: my-application
+config:
+  database_url: "http://default-database-url.com"
