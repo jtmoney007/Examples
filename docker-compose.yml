@@ -22,3 +22,10 @@ services:
       context: .
       dockerfile: KubernetesExamples/SecretsConsoleApp/Dockerfile
 
+
+  helloworldapp:
+    image: jtest004.azurecr.io/helloworldapp
+    build:
+      context: .
+      dockerfile: KubernetesExamples/HelloWorldApp/Dockerfile
+

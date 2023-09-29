@@ -6,7 +6,8 @@
       "serviceActions": {
         "configmapconsoleapp": "StartDebugging",
         "simpleconsoleapp": "StartDebugging",
-        "secretsconsoleapp": "StartDebugging"
+        "secretsconsoleapp": "StartDebugging",
+        "helloworldapp": "StartDebugging"
       }
     }
   }

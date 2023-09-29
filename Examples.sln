@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LocalFileSystemExample", "L
 		KubernetesExamples\LocalFileSystemExample\kubernetes_cronjob.yaml = KubernetesExamples\LocalFileSystemExample\kubernetes_cronjob.yaml
 		KubernetesExamples\LocalFileSystemExample\kubernetes_setup.yaml = KubernetesExamples\LocalFileSystemExample\kubernetes_setup.yaml
 		KubernetesExamples\LocalFileSystemExample\kubernetes_storage.yaml = KubernetesExamples\LocalFileSystemExample\kubernetes_storage.yaml
+		KubernetesExamples\LocalFileSystemExample\readme.md = KubernetesExamples\LocalFileSystemExample\readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigMapExample", "ConfigMapExample", "{B2505E99-D092-48D2-AA3B-07AC3651D6A6}"
@@ -21,13 +22,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigMapExample", "ConfigM
 		KubernetesExamples\ConfigMapExample\kubernetes_clusterrole.yaml = KubernetesExamples\ConfigMapExample\kubernetes_clusterrole.yaml
 		KubernetesExamples\ConfigMapExample\kubernetes_clusterrolebinding.yaml = KubernetesExamples\ConfigMapExample\kubernetes_clusterrolebinding.yaml
 		KubernetesExamples\ConfigMapExample\kubernetes_configmap.yaml = KubernetesExamples\ConfigMapExample\kubernetes_configmap.yaml
-		KubernetesExamples\ConfigMapExample\kubernetes_setup.yaml = KubernetesExamples\ConfigMapExample\kubernetes_setup.yaml
 		KubernetesExamples\ConfigMapExample\kubernetes_job.yaml = KubernetesExamples\ConfigMapExample\kubernetes_job.yaml
+		KubernetesExamples\ConfigMapExample\kubernetes_setup.yaml = KubernetesExamples\ConfigMapExample\kubernetes_setup.yaml
+		KubernetesExamples\ConfigMapExample\readme.md = KubernetesExamples\ConfigMapExample\readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigMapConsoleApp", "KubernetesExamples\ConfigMapConsoleApp\ConfigMapConsoleApp.csproj", "{D91C237B-1B86-41D2-86B6-02F8205094AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigMapConsoleApp", "KubernetesExamples\ConfigMapConsoleApp\ConfigMapConsoleApp.csproj", "{D91C237B-1B86-41D2-86B6-02F8205094AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretsConsoleApp", "KubernetesExamples\SecretsConsoleApp\SecretsConsoleApp.csproj", "{DAF26B32-E33F-44B8-884B-66148569ED58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecretsConsoleApp", "KubernetesExamples\SecretsConsoleApp\SecretsConsoleApp.csproj", "{DAF26B32-E33F-44B8-884B-66148569ED58}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecretExample", "SecretExample", "{1FA6908C-AB5C-4417-BD86-7417B8CD793C}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,7 +38,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecretExample", "SecretExam
 		KubernetesExamples\SecretExample\kubernetes_rolebinding.yaml = KubernetesExamples\SecretExample\kubernetes_rolebinding.yaml
 		KubernetesExamples\SecretExample\kubernetes_secrets.yaml = KubernetesExamples\SecretExample\kubernetes_secrets.yaml
 		KubernetesExamples\SecretExample\kubernetes_setup.yaml = KubernetesExamples\SecretExample\kubernetes_setup.yaml
+		KubernetesExamples\SecretExample\readme.md = KubernetesExamples\SecretExample\readme.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelmsExample", "HelmsExample", "{39CFDC45-BC9B-4956-9C1C-92CDE63E1E2E}"
+	ProjectSection(SolutionItems) = preProject
+		KubernetesExamples\HelmsExample\readme.md = KubernetesExamples\HelmsExample\readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "my-helm-chart", "my-helm-chart", "{6D79B92F-2DD7-4C29-9479-A22D42BC3192}"
+	ProjectSection(SolutionItems) = preProject
+		KubernetesExamples\HelmsExample\my-helm-chart\chart.yaml = KubernetesExamples\HelmsExample\my-helm-chart\chart.yaml
+		KubernetesExamples\HelmsExample\my-helm-chart\values.yaml = KubernetesExamples\HelmsExample\my-helm-chart\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{EAB9DDA8-35F2-4DCD-B027-8BA7E3A85F24}"
+	ProjectSection(SolutionItems) = preProject
+		KubernetesExamples\HelmsExample\my-helm-chart\templates\configmap.yaml = KubernetesExamples\HelmsExample\my-helm-chart\templates\configmap.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Terraform", "Terraform", "{E6D71139-C590-44F4-8573-8DCF9BA24DEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureManualDeployment", "AzureManualDeployment", "{4A0E83DA-C4FD-4D41-8707-360A155AC262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldApp", "KubernetesExamples\HelloWorldApp\HelloWorldApp.csproj", "{A1BAAC4D-093E-4BED-AC02-21844AD023C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +85,10 @@ Global
 		{DAF26B32-E33F-44B8-884B-66148569ED58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAF26B32-E33F-44B8-884B-66148569ED58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAF26B32-E33F-44B8-884B-66148569ED58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1BAAC4D-093E-4BED-AC02-21844AD023C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1BAAC4D-093E-4BED-AC02-21844AD023C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1BAAC4D-093E-4BED-AC02-21844AD023C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1BAAC4D-093E-4BED-AC02-21844AD023C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +100,12 @@ Global
 		{D91C237B-1B86-41D2-86B6-02F8205094AD} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
 		{DAF26B32-E33F-44B8-884B-66148569ED58} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
 		{1FA6908C-AB5C-4417-BD86-7417B8CD793C} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+		{39CFDC45-BC9B-4956-9C1C-92CDE63E1E2E} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+		{6D79B92F-2DD7-4C29-9479-A22D42BC3192} = {39CFDC45-BC9B-4956-9C1C-92CDE63E1E2E}
+		{EAB9DDA8-35F2-4DCD-B027-8BA7E3A85F24} = {6D79B92F-2DD7-4C29-9479-A22D42BC3192}
+		{E6D71139-C590-44F4-8573-8DCF9BA24DEA} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+		{4A0E83DA-C4FD-4D41-8707-360A155AC262} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
+		{A1BAAC4D-093E-4BED-AC02-21844AD023C9} = {292D0243-D469-4AD0-83A8-C333E33A57E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4296452C-447A-4A83-8B17-BDA521E7527F}

@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: helloworld-job
+spec:
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: helloworld
+        image: jtest004.azurecr.io/helloworldapp:latest
+        imagePullPolicy: Always
+      restartPolicy: Never
