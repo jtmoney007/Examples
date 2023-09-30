@@ -71,7 +71,7 @@ az acr list --resource-group "YourResourceGroupName"  --output table
 az aks list --resource-group "YourResourceGroupName"  --output table
 ```
 
-### 7. **Create your Dockerfile and compose file**
+### 8. **Create your Dockerfile and compose file**
 
 Make sure your image follows the following naming convention in your compose file:
 "YourRegistryName".azurecr.io/helloworldapp
@@ -81,13 +81,13 @@ Now lets build:
 docker compose up --build
 ```
 
-### 8. **Pointing to our registry**
+### 9. **Pointing to our registry**
 
 ```bash
 az acr login --name "YourRegistryName"
 ```
 
-### 9. **Pushing to registry**
+### 10. **Pushing to registry**
 
 ```bash
 docker push "YourRegistryName".azurecr.io/helloworldapp
@@ -117,7 +117,7 @@ Now lets check if our repository has been created:
 az acr repository list --name "YourRegistryName" --output table
 ```
 
-### 10. **Deploying our Kubernetes YAML**
+### 11. **Deploying our Kubernetes YAML**
 
 1. Install kubectl is not installed
 ```bash

@@ -53,7 +53,7 @@ az aks install-cli
 az aks get-credentials --resource-group MyResourceGroup --name MyAKSCluster
 ```
 
-### 7. **Create an Azure Storage Account and File Share**
+### 8. **Create an Azure Storage Account and File Share**
 
 ```bash
 # Create storage account
@@ -68,13 +68,13 @@ az storage share create --name myfileshare --account-name mystorageaccount --acc
 
 Note: Use powershell terminal
 
-### 8. **Create a Kubernetes Secret for Azure Storage**
+### 9. **Create a Kubernetes Secret for Azure Storage**
 
 ```bash
 kubectl create secret generic azure-secret --from-literal=azurestorageaccountname=mystorageaccount --from-literal=azurestorageaccountkey=$STORAGE_KEY
 ```
 
-### 9. **Create a Pod with Azure File Share mounted**
+### 10. **Create a Pod with Azure File Share mounted**
 
 ```bash
 apiVersion: v1
@@ -102,7 +102,7 @@ Note: keyword "file share"
 kubectl apply -f azure-pod.yaml
 ```
 
-### 10. **Lets take it for a spin**
+### 11. **Lets take it for a spin**
 
 ```bash
 kubectl get pods
