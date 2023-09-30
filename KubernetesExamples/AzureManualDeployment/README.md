@@ -117,7 +117,7 @@ Now lets check if our repository has been created:
 az acr repository list --name "YourRegistryName" --output table
 ```
 
-### 9. **Deploying our Kubernetes YAML**
+### 10. **Deploying our Kubernetes YAML**
 
 1. Install kubectl is not installed
 ```bash
